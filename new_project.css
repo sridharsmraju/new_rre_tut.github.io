@@ -1,0 +1,400 @@
+* {
+    border: 0;
+    margin: 0;
+
+}
+
+.nav_bar {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    ;
+}
+
+.nav_bar ul {
+    /* border: 2px solid red; */
+    display: flex;
+    list-style: none;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nav_bar ul a {
+    text-decoration: none;
+    padding: 0px 42px;
+    margin: 9px 4px;
+    font-size: large;
+    color: white;
+    text-decoration: none;
+
+}
+
+.nav_bar ul a:visited {
+    text-decoration: underline;
+}
+
+.nav_bar ul a {
+    margin-bottom: 3rem;
+}
+
+.nav_bar ul img {
+    position: absolute;
+    left: 0px;
+    cursor: pointer;
+    background-size: contain;
+    width: 41px;
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50px;
+    margin-left: 40px;
+}
+
+.nav_part2 {
+    width: 30%;
+    /* border:2px solid black;  */
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+
+}
+
+.nav_bar div button {
+    padding: 0px 30px;
+    margin: 19px 4px;
+    cursor: pointer;
+    border-radius: 20px;
+    background: rgb(90, 90, 187);
+    border: 2px solid rgb(90, 90, 187);
+    color: white;
+    margin-right: 15px;
+
+}
+
+.nav_bar div button a {
+    text-decoration: none;
+    color: black;
+    /* display: block; */
+}
+
+.nav_bar ul span {
+    /* border: 2px solid red; */
+    width: 10rem;
+    height: 10rem;
+}
+
+.nav_bar ul p {
+    color: rgb(129, 77, 77);
+    width: 5 rem;
+    margin-top: 5rem;
+    position: absolute;
+    top: -22px;
+    left: 40rem;
+    display: none;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+.nav_bar ul h4 {
+
+    color: white;
+    position: absolute;
+    top: 4rem;
+    left: 23px;
+    font-style: italic;
+    font-family: serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.background {
+
+    background: rgba(0, 0, 0, 0.7) url("/imgs/singapore-buildings-xlarge.webp"); 
+    /* background: rgba(0, 0, 0, 0.7) url("/imgs/singapore-buildings-xlarge-new.jpg");  */
+    /* background-image: url("/imgs/singapore-buildings-xlarge.webp"); */
+    /* background-color: light black; */
+    background-size: cover;
+    background-blend-mode: darken;
+    width: 100%;
+    /* border : 5px solid red; */
+
+    /* background-repeat: no-repeat; */
+}
+
+.section_center {
+    display: flex;
+    height: 50vh;
+    width: 100%;
+    padding: 46px 16px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.sc {
+    width: 23.33%;
+    justify-content: center;
+    padding-right: 20px;
+    border: 2px solid white;
+    margin: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    height: 20rem;
+
+
+}
+
+.section_center ul li {
+    color: white;
+    list-style: square;
+    text-decoration: solid;
+    font-size: larger;
+}
+
+
+.bigtext {
+    color: rgb(73, 211, 147);
+    font-size: 30px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.smalltext {
+    color: white;
+    font-size: 20px;
+    text-align: justify;
+    justify-content: center;
+    padding-top: 1rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.section_last {
+    display: flex;
+    justify-content: center;
+    height: 10rem;
+    background-color: bisque;
+    width: 100%;
+    /* border: 1px solid red; */
+
+}
+
+.section_last div {
+    padding-top: 20px;
+    width: 70%;
+}
+
+.section_last div p {
+    color: black;
+    text-align: center;
+
+    margin: 0 auto;
+}
+
+.section_last div img {
+    width: 10rem;
+    border: 2px solid black;
+    border-radius: 40px;
+    margin: -7px 16px 5px 21px;
+    height: 8rem;
+    padding: 2px;
+
+
+}
+
+
+
+.center4 {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 4rem;
+    border: none;
+}
+
+.center5 {
+    display: flex;
+    height: 8rem;
+    border: none;
+}
+
+
+.section_last_2 {
+    display: flex;
+
+}
+
+footer {
+    background-color: pink;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+
+/* ----------------------------------------------------------------------------------
+log on page */
+
+.logon {
+    display: flex;
+    background-color: brown;
+}
+
+.logon form {
+    display: flex;
+}
+
+.tile
+{
+    display: none;
+}
+
+/* media part 
+Lets handle for screen size 768 px and below for now */
+@media screen and (max-width:513px)
+{
+    
+.main_Container
+{
+    display :none;
+}
+.section_last
+{
+    display :none;
+    
+    
+}
+.tile
+{
+    display: block;
+}
+}
+
+@media screen and (max-width:966px) and (min-width:514px) ,()
+{
+    .nav_bar {
+        flex-direction: column;
+        /* border: 2px solid pink; */
+        width: 99%;
+        height: 15rem;
+    }
+
+    .nav_part2 {
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid green; */
+        width: 99%;
+        padding: 8px;
+    }
+
+    .nav_bar ul li {
+        height: 30px;
+    }
+
+    #ac1 {
+        display: none;
+    }
+
+    .nav_bar ul {
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid red; */
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        margin: 2px;
+        height: 10rem;
+    }
+
+    .nav_bar ul a img {
+        /* width: 100%; */
+        /* padding-left: 100px; */
+        /* margin-left:  45%; */
+        display: none;
+
+        margin: auto auto;
+        /* border: 2px solid green; */
+
+    }
+
+    .nav_bar ul a {
+        display: block;
+        width: 100%;
+        /* border: 2px solid blue; */
+         justify-content: center;
+        align-items: center;
+        height: 10px;
+        margin: 5px 4px;
+        /* margin: auto; */
+        padding: 8px;
+    }
+
+
+
+    .nav_bar ul a h4 {
+        position: static;
+
+    }
+
+    .nav_bar div button{
+        /* padding: 0px 30px; */
+    margin: 5px 4px;
+    /* cursor: pointer;
+    border-radius: 20px;
+    background: rgb(90, 90, 187);
+    border: 2px solid rgb(90, 90, 187);
+    color: white;
+    margin-right: 15px; */
+    /* width:5rem; */
+    
+    }
+
+    .background
+    {
+        border: 5px solid black;
+        
+    }
+
+    .section_center {
+  flex-direction: column;
+    }
+
+    .sc
+    {
+        width:90%;
+        /* height: 500 rem; */
+    }
+
+    .section_center {
+        display: flex;
+        height: 162vh
+    }
+
+    .section_last div img
+    {
+        display: none;
+    }
+
+    .section_last
+    {
+        min-height: 52vh
+    }
+
+    .section_last_2
+    {
+        background-color: yellow;
+    }
+    .tile
+    {
+        display: none;
+    }
+}
+
+

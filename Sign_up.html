@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <style>
+        .section_signup {
+            width: 30rem;
+            display: flex;
+            margin: 10px auto;
+
+            /* background-color: brown; */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 0px;
+            border: 5px solid white;
+            position: relative;
+            top: 15px;
+            border-radius: 20px;
+            min-height: 10rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .main_container_signup {
+            background: rgba(0, 0, 0, 0.7) url("/imgs/singapore-buildings-xlarge.webp");
+            /* background-image: url("/imgs/singapore-buildings-xlarge.webp"); */
+            /* background-color: light black; */
+            background-size: cover;
+            background-blend-mode: darken;
+            /* width: 100%; */
+            width: 1200px;
+            height: 600px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .main_container_signup section form button {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            border-radius: 0px;
+            padding: 4px 4px;
+            width: 80px;
+            margin-top: 10px;
+        }
+
+
+        .main_container_signup section form {
+            padding: 10px;
+        }
+
+        .main_container_signup section form input {
+            margin: 10px;
+            border: 1px solid red;
+            border-radius: 10px;
+            padding: 5px;
+            width: 15rem;
+
+        }
+
+        .inp {
+            margin: 10px;
+        }
+
+        .main_container_signup section form button {
+            cursor: pointer;
+            border-radius: 10px;
+            border: 2px solid rgb(78, 78, 153);
+            background-color:rgb(78, 78, 153);
+        }
+
+        #male #female {
+            /* margin-left: 183px; */
+            width: 10px;
+            margin-top: 1px;
+        }
+
+        pre {
+            color: white;
+            /* position:absolute; */
+            left: 10px;
+            font-weight: 100;
+            text-decoration: solid;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10px;
+
+        }
+
+        .gender {
+            color: white;
+            position: absolute;
+            left: 120px;
+            top: 16.3rem;
+        }
+
+
+        .dob {
+            position: absolute;
+            left: 16px;
+            top: 18rem;
+            color: white;
+        }
+
+        .gender_div {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            /* position: absolute;
+    left:20px; */
+            /* top:17.8rem; */
+            color: white;
+        }
+
+   
+
+        span
+        {
+margin: 2px;
+color: rgb(211, 20, 20);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_container_signup">
+        <section class="section_signup">
+            <h1>Its Easy!</h1>
+            <form action="/dummy.php" method="post" name="sigin" onsubmit="return validate007()">
+                <input type="text" placeholder="Name" name="name" id="name">
+                <span></span>
+                <input type="text" placeholder="ph" name="Ph" id="Ph">
+                <span><b></b></span>
+                <input type="password" placeholder="password" name="password" id="password">
+                <input type="password" placeholder="confrim password" name="cpassword" id="cpassword">
+                <span><b></b></span>
+
+
+                <p class="dob">date of birth?</p>
+                <input type="date">
+
+                <!-- add validation using JS -->
+                <!-- <p class="gender">gender?</p> -->
+                <pre>Male:   Female: </pre>
+                <div class="gender_div">
+                    <input type="radio" name="gender" id="male">
+                    <input type="radio" name="gender" id="Female">
+                </div>
+                <button class="btn">Submit</button>
+            </form>
+        </section>
+    </div>
+    <script>
+        function validate007() {
+            console.log('HEllo');
+            let name_value = document.forms['sigin']['name'].value;
+            let name_name = document.forms['sigin']['name'].name;
+            let ph_value = document.forms['sigin']['Ph'].value;
+             let ph_name = document.forms['sigin']['Ph'].name;
+         let pass_value = document.forms['sigin']['password'].value;
+             let pass_name = document.forms['sigin']['password'].name;
+             let cpass_value = document.forms['sigin']['cpassword'].value;
+             let cpass_name = document.forms['sigin']['cpassword'].name;
+
+            
+        
+              
+            if (name_value.length < 5)
+             
+            {
+                console.log('inside if');
+                seterror(name_name,'<b>*name cannot be less than 5 character<b>');
+            }
+            else if ( ph_value.length < 10 )
+            { 
+                console.log(' el inside if');
+                seterror(ph_name, '<b>*ph cannot be less than 10 digits<b>');
+            }
+
+            else if (pass_value != cpass_value)
+            {
+                console.log(' el inside if 2');
+                seterror(cpass_name, '<b>*Passowrd mismatch<b>');
+            }
+          
+            else 
+            {
+                return true;
+            }
+
+             
+            return false;
+
+        }
+
+        function seterror (name,error)
+        {
+            console.log('inside seterror');
+            let doc=document.getElementById(name);
+            let docc=doc.nextElementSibling;
+            console.log(docc);
+              docc.innerHTML=error;
+        }
+
+
+    </script>
+</body>
+
+
+</html>

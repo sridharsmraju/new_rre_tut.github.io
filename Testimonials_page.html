@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+
+    <style>
+        * {
+            padding: 0;
+            border: 0;
+        }
+
+        .maincontainer {
+            display: flex;
+            width: 81rem;
+            min-height: 45rem;
+            /* border: 2px solid blue; */
+            background-color: lightsalmon;
+         text-align: center;
+         color: purple;
+
+
+        }
+
+        .testinomial_section {
+            border: 2px solid red;
+            width: 41rem;
+            background: rgba(0, 0, 0, 0.7) url("/imgs/singapore-buildings-xlarge.webp");
+            /* background-image: url("/imgs/singapore-buildings-xlarge.webp"); */
+            /* background-color: light black; */
+            background-size: cover;
+            background-blend-mode: darken;
+            border-radius: 20px;
+           
+        }
+
+        #Submit_btn
+        {
+            border:2px solid black;
+             border-radius: 10px;
+             padding: 10px;
+             background-color: blue;
+             cursor: pointer;
+        }
+        #inpt
+        {
+            border: 2px solid black;
+            border-radius: 10px;
+            padding :10px;
+        }
+
+        .advsection_left {
+            /* border: 2px solid brown; */
+            width: 20rem;
+        }
+
+        .advsection_right {
+            /* border: 2px solid pink; */
+            width: 20rem;
+            
+        }
+
+        .new_add {
+            margin:1rem 3rem;
+            border: 2px solid lightgoldenrodyellow;
+            width: 35rem;
+            height:3rem;
+            background-color: blanchedalmond;
+             border-radius: 20px;
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="maincontainer">
+
+        <div class="advsection_left">
+
+
+
+        </div>
+
+        <div class="testinomial_section">
+            <form action="/dummy.php" name='cnt_form' method='post' onsubmit="return add_dummy_testionilas()">
+                <h1>Enter the no of testinomial you wish to see of our students?</h1>
+                <input type='number' name='cont' id='inpt' required>
+                <input type="submit" id="Submit_btn"> 
+            </form>
+
+
+
+        </div>
+
+
+        <div class="advsection_right">
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+    <script>
+        function add_dummy_testionilas() {
+            
+            let cnt = document.forms["cnt_form"]["cont"].value;
+            console.log('start');
+            console.log(cnt);
+           
+            for (let i = 0; i < cnt; i++) {
+                console.log('inside for', i);
+                let elem1 = document.getElementsByClassName('testinomial_section');
+                 console.log(elem1[0]);
+                let new_elem = document.createElement('div');
+                let class_nmae='new_add'+i;
+                new_elem.className = 'new_add new_add'+i;
+                elem1[0].appendChild(new_elem);
+                elem1[0].getElementsByClassName(class_nmae)[0].innerHTML='lorem3';
+
+            }
+
+            console.log('end');
+            return false;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
