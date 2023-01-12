@@ -178,7 +178,7 @@
     text-align: justify;
     justify-content: center;
     padding-top: 1rem;
-    font-family: 'Ubuntu', sans-serif;
+/*     font-family: 'Ubuntu', sans-serif; */
 }
 
 
@@ -284,7 +284,7 @@ Lets handle for screen size 768 px and below for now */
 }
 }
 
-@media screen and (max-width:966px) and (min-width:514px) ,()
+@media screen and (max-width:966px) and (min-width:514px) 
 {
     .nav_bar {
         flex-direction: column;
@@ -372,12 +372,13 @@ Lets handle for screen size 768 px and below for now */
 
     .section_center {
   flex-direction: column;
+        height: 100vh
     }
 
     .sc
     {
         width:90%;
-        /* height: 500 rem; */
+          height:40vh;
     }
 
     .section_center {
